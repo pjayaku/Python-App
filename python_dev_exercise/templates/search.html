@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<h1>Search</h1>
+</head>
+<body>
+	<form action="{{ url_for("search")}}" method="POST">
+	<label for="firstname">First Name:</label>
+	<input type="text" id="firstname" name="fname">
+	<button type="submit">Submit</button>
+	</form>
+
+	{% for table in tables %}
+	    {{ table|safe }}
+	{% endfor %}
+</body>
+</html>
